@@ -1,17 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=yes"/>
   <title>黄皓18098159909 - 个人名片</title>
+  <meta name="format-detection" content="telephone=yes"/>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      padding: 3px;
+    }
+
+    img {
+      width: 390px;
+    }
+
+    .bilibili,.youtube   {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+    }
+  </style>
+
 </head>
+
 <body>
-  伙伴地产集团
-  黄皓
-  出生于：
-  中国台湾台北
-  🌏对大陆内地市场，熟悉，了解，透彻，职务：地产法律顾问：黄皓
-  电话：
-  +8618098159909
+  <ul>
+    <li>伙伴地产集团</li>
+    <li style="font-weight: bold;">黄皓</li>
+    <li>出生于：🇨🇳中国台湾台北</li>
+    <li>🌏对大陆内地市场，熟悉，了解，透彻</li>
+    <li>职务：地产法律顾问</li>
+    <hr>
+    <li style="font-weight: bold;">电话：  <a href="18098159909">+86-18098159909</a></li>
+  </ul>
+
+  <div class="img"></div>
+
+  <div class="links">
+    <div>B站视频链接：</div>
+    <ul class="bilibili">
+    </ul>
+    <div>YouTube：</div>
+    <ul class="youtube">
+    </ul>
+  </div>
+
+  <script>
+    let imgWrap = document.querySelector('.img')
+
+    for (let i = 1; i < 9; i++) {
+      let img = new Image()
+      img.src = `./src/img/${i}.jpg`
+      imgWrap.appendChild(img)
+    }
+
+    let Bilibililinks =
+      ['https://www.bilibili.com/video/BV1Lw411n7h2/?spm_id_from=333.999.0.0',
+        'https://www.bilibili.com/video/BV1Fc411z7YV/?spm_id_from=333.999.0.0',
+        'https://www.bilibili.com/video/BV14N411M7Eo/?spm_id_from=333.999.0.0',
+        'https://www.bilibili.com/video/BV1Qe411f7bv/?spm_id_from=333.999.0.0',
+        'https://www.bilibili.com/video/BV1TN4y1U7JQ/?spm_id_from=333.999.0.0',
+        'https://www.bilibili.com/video/BV1rN4y1176Q/?spm_id_from=333.999.0.0',
+        'https://www.bilibili.com/video/BV1Gu4y1572H/?spm_id_from=333.999.0.0']
+    let youtubeLinks = [
+      'https://www.youtube.com/watch?v=goYqlRvLHGk',
+      'https://www.youtube.com/watch?v=_LDqPrPES6I',
+      'https://www.youtube.com/watch?v=L10_DnkFyrE',
+      'https://www.youtube.com/watch?v=z0vt1S8tTs0',
+      'https://www.youtube.com/watch?v=b0Z802JCz3Y',
+      'https://www.youtube.com/watch?v=XeI8w9VMR6k',
+      'https://www.youtube.com/watch?v=b1TPZmcCUtw',
+    ]
+
+    let bilibili = document.querySelector('.bilibili')
+    let youtube = document.querySelector('.youtube')
+
+    function appendLinks (links, wraps, i) {
+      let li = document.createElement('li')
+      let a = document.createElement('a')
+      a.href = links
+      a.innerText = `厂房视频${i}`
+      li.appendChild(a)
+      wraps.appendChild(li)
+    }
+    for (let i = 0; i < 7; i++) {
+      appendLinks(Bilibililinks[i], bilibili, i+1)
+      appendLinks(youtubeLinks[i], youtube, i+1)
+    }
+
+  </script>
 </body>
+
 </html>
