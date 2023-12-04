@@ -36,12 +36,17 @@
       width: 390px;
       height: 216px;
     }
+    .imgall {
+      position: relative;
+    }
     .img-wrap {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       width: 100vw;
       justify-content: space-between;
+      position: absolute;
+      bottom: -17px;
     }
 
     .img-wrap img {
@@ -80,7 +85,7 @@
     <li style="font-weight: bold;">电子信箱:  <a>422672048@qq.com</a></li>
   </ul>
 
-  <ul>
+  <!-- <ul>
     <li>伙伴地产集团</li>
     <li style="font-weight: bold;">黄皓</li>
     <li>出生于：🇨🇳中国台湾台北</li>
@@ -89,11 +94,13 @@
     <hr>
     <li style="font-weight: bold;">电话：  <a href="tel:18098159909">+86-18098159909</a></li>
     <li style="font-weight: bold;">Email：  <a>422672048@qq.com</a></li>
-  </ul>
-  <div class="img1">
-    <img src="./src/img/1.jpg" alt="">
+  </ul> -->
+  <div class="imgall">
+    <div class="img1">
+      <img src="./src/img/1.jpg" alt="">
+    </div>
+    <div class="img img-wrap"></div>
   </div>
-  <div class="img img-wrap"></div>
 
   <div>
     
@@ -104,12 +111,18 @@
   </div>
 
   <div class="links">
-    <div>B站视频链接：</div>
-    <ul class="bilibili">
-    </ul>
+    
     <div>YouTube：</div>
     <ul class="youtube">
     </ul>
+    <div>B站视频链接：</div>
+    <ul class="bilibili">
+    </ul>
+
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
 
   <script>
