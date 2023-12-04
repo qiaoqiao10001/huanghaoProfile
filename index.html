@@ -12,6 +12,10 @@
       padding: 0;
       margin: 0;
     }
+    img{
+      margin: 0;
+      padding: 0;
+    }
     ul {
       list-style: none;
       padding: 0;
@@ -23,8 +27,25 @@
       padding: 3px;
     }
 
-    img {
+    .img1 {
       width: 390px;
+      height: 216px;
+    }
+
+    .img1 img{
+      width: 390px;
+      height: 216px;
+    }
+    .img-wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100vw;
+      justify-content: space-between;
+    }
+
+    .img-wrap img {
+      width: 33.3%;
     }
 
     .bilibili,.youtube   {
@@ -37,6 +58,28 @@
 </head>
 
 <body>
+  
+  <ul>
+    <li>Partner Real Estate Group</li>
+    <li style="font-weight: bold;">Huang Hao</li>
+    <li>Birthplace: Taiwan, China🇨🇳</li>
+    <li>🌏 Well-versed and deeply knowledgeable about the mainland Chinese market.  Consultant: Huang Hao</li>
+    <li>Role: Real Estate Legal</li>
+    <hr>
+    <li style="font-weight: bold;">Phone:  <a href="tel:18098159909">+86-18098159909</a></li>
+    <li style="font-weight: bold;">Email:  <a>422672048@qq.com</a></li>
+  </ul>
+  <ul>
+    <li>伙伴地產集團</li>
+    <li style="font-weight: bold;">黃皓</li>
+    <li>出生於：中國台灣台北</li>
+    <li>🌏 對大陸內地市場，熟悉，了解，透徹</li>
+    <li>職務：地產法律顧問</li>
+    <hr>
+    <li style="font-weight: bold;">電話:  <a href="tel:18098159909">+86-18098159909</a></li>
+    <li style="font-weight: bold;">电子信箱:  <a>422672048@qq.com</a></li>
+  </ul>
+
   <ul>
     <li>伙伴地产集团</li>
     <li style="font-weight: bold;">黄皓</li>
@@ -45,9 +88,20 @@
     <li>职务：地产法律顾问</li>
     <hr>
     <li style="font-weight: bold;">电话：  <a href="tel:18098159909">+86-18098159909</a></li>
+    <li style="font-weight: bold;">Email：  <a>422672048@qq.com</a></li>
   </ul>
+  <div class="img1">
+    <img src="./src/img/1.jpg" alt="">
+  </div>
+  <div class="img img-wrap"></div>
 
-  <div class="img"></div>
+  <div>
+    
+    <br>
+    wechat download 
+    微信下载
+    <br><img src="./src/img/wechat.png" alt="">
+  </div>
 
   <div class="links">
     <div>B站视频链接：</div>
@@ -61,7 +115,7 @@
   <script>
     let imgWrap = document.querySelector('.img')
 
-    for (let i = 1; i < 9; i++) {
+    for (let i = 2; i < 5; i++) {
       let img = new Image()
       img.src = `./src/img/${i}.jpg`
       imgWrap.appendChild(img)
